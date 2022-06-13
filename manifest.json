@@ -1,0 +1,10 @@
+{
+  "name": "Dall-e Mini Autorefresh",
+  "description": "Keeps asking dall-e mini to create an image. - Made by @justekoro",
+  "version": "0.1",
+  "manifest_version": 3,
+  "author": "justekoro",
+  "background": {
+    "service_worker": "autorefresh.js"
+  }
+}
