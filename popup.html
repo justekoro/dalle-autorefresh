@@ -3,8 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Dall-e autorefresh</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body{
+            width: 500px;
+            height: 550px;
+            background-color: #767676;
+        }
+        .center {
+            text-align: center;
+        }
+        .explanation_img{
+            width: 90%;
+        }
+        .hidden{
+            display: none;
+        }
+        button {
+            background-color: #767676;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <h1>hi</h1>
+    <h1 class="center">Dall-E Autorefresh</h1>
+    <img class="explanation_img" src="explanation.png" alt="explanation">
+    <script src="popup.js">
+    </script>
+    <div class="hidden">
+        <h1 class="center">Dall-E is detected on this page!</h1>
+    </div>
 </body>
 </html>
