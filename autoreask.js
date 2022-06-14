@@ -1,3 +1,1 @@
-const elt = document.createElement("script");
-elt.setAttribute("src", "");
-document.head.appendChild(elt);
+alert("To use autorefresh please go to https://hf.space/static/dalle-mini/dalle-mini/index.html")

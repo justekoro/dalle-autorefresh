@@ -2,7 +2,7 @@
   "name": "Dall-e Mini Autorefresh",
   "description": "Keeps asking dall-e mini to create an image. - Made by @justekoro",
   "version": "0.1",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "author": "justekoro",
   "background": {
     "service_worker": "autorefresh.js"
@@ -20,11 +20,17 @@
     "tabs",
     "activeTab"
   ],
+  "content_security_policy": "script-src 'self' 'inline-script' 'unsafe-eval'; object-src 'self'",
   "content_scripts": [
     {
       "matches": ["https://huggingface.co/spaces/dalle-mini/dalle-mini"],
       "js": ["autoreask.js"],
-      "run_at": "document_end"
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://hf.space/static/dalle-mini/dalle-mini/index.html"],
+      "js": ["ra.js"],
+      "run_at": "document_start"
     }
   ],
   "host_permissions": [
