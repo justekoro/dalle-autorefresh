@@ -24,7 +24,7 @@ console.log("hi!");
         }
         } catch (e) {
             console.log("Error", e);
-            setTimeout(()=>{document.getElementById("7").click();},200);
+            setTimeout(()=>{document.getElementById("8").click();},200);
             return false;
         }
     }
