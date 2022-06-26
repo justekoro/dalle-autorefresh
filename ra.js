@@ -12,19 +12,19 @@ console.log("hi!");
     console.log("fetching!!")
         console.log("fetch", args);
         const [resource, config] = args;
-        if (!resource.startsWith("https://bf.dallemini.ai")) return window[originalFetchLocation](resource,config);
+        if (!resource.startsWith("https://bf.dallemini.ai") && !resource.startsWith("https://backend.craiyon.com")) return window[originalFetchLocation](resource,config);
         try {const resp = await window[originalFetchLocation](resource, config);
         if (resp.status == 200) {
             console.log("Status 200!");
             return resp;
         } else {
-            setTimeout(()=>{document.getElementById("7").click();},200);
+            setTimeout(()=>{document.getElementsByTagName("button")[0].click();},200);
             console.log("Status were", resp.status,": retrying...");
             return resp;
         }
         } catch (e) {
             console.log("Error", e);
-            setTimeout(()=>{document.getElementById("8").click();},200);
+            setTimeout(()=>{document.getElementsByTagName("button")[0].click();},200);
             return false;
         }
     }

@@ -1,7 +1,7 @@
 {
   "name": "Dall-e Mini Autorefresh",
   "description": "Keeps asking dall-e mini to create an image. - Made by @justekoro",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
   "author": "justekoro",
   "action": {
@@ -19,7 +19,7 @@
       "run_at": "document_start"
     },
     {
-      "matches": ["https://hf.space/static/dalle-mini/dalle-mini/index.html"],
+      "matches": ["https://hf.space/static/dalle-mini/dalle-mini/index.html","https://www.craiyon.com/*","https://craiyon.com/*"],
       "js": ["ra.js"],
       "run_at": "document_start"
     }
